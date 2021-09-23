@@ -25,6 +25,7 @@ console.timeEnd('HELLO End'); //time
 
 // 3: var, let, const
 
+/*
 // var:
 
 var name = 'Ali Hassan'; //declaring
@@ -71,3 +72,27 @@ console.log(person);
 const num = [1, 2, 3, 4, 5];
 num.push(6); // same goes for arrays, here we adding a number to array
 console.log(num);
+*/
+
+// Data Types:
+
+
+// PRIMITIVE
+
+const name = 'John Doe'; // String
+const age = 45; // Number
+const hasKids = true; // Boolean
+const car = null; // Null
+let test; // Undefined
+const sym = Symbol(); // Symbol
+
+// REFERENCE TYPES - Objects
+
+const hobbies = ['movies', 'music']; // Array
+const address = {
+  city: 'Boston',
+  state: 'MA'
+} // Object literal
+const today = new Date();
+console.log(today);
+console.log(typeof today);
