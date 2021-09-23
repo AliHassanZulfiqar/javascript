@@ -143,6 +143,7 @@ console.log(typeof sum);
 
 // 6: Math Object & numbers
 
+/*
 const num1 = 100;
 const num2 = 50;
 let val;
@@ -170,5 +171,64 @@ val = Math.random();
 val = Math.random() * 20; // a random number b/w 1 & 19
 val = Math.random() * 20 + 1; // a random number b/w 1 & 20
 val = Math.floor(Math.random() * 20 + 1); // a random number b/w 1 & 20 excluding decimals
+
+console.log(val);
+*/
+
+// 7: String Methods Concatenation
+
+const firstName = 'Ali';
+const lastName = 'Hassan';
+const age = 43;
+const str = 'Hey, I have been looking for you'
+const tags = 'Web Development, Programming, Web Designing, SEO'
+
+let val;
+
+val = firstName + lastName;
+
+
+val = firstName + ' ' + lastName; //concatenation
+
+val = firstName;
+val += lastName; //appending
+
+val = 'Ali ';
+val += 'Hassan' //appending
+
+val = 'Hello! My name is ' + firstName + ' and I am ' + age;
+
+val = 'He\'s been living at her sister\'s for several months now'; // Escaping
+val = "He's been living at her sister's for several months now"; // Escaping
+
+// properties and methods available with strings
+
+val = firstName.length; //legth
+
+val = firstName.concat(' ', lastName); //concat()-> similar to concatenation
+
+val = firstName.toUpperCase(); //changing the case
+val = firstName.toLowerCase();
+
+val = firstName[0]; //array
+
+val = firstName.indexOf('l');
+val = firstName.lastIndexOf('l');
+
+val = firstName.charAt(1);
+val = firstName.charAt(firstName.length - 1); // formula for showing the last character
+
+val = firstName.substring(0, 2); //substring
+
+val = firstName.slice(0,2) //almost same as substring
+val = firstName.slice(-2) //but can be used with -ve values
+
+val = str.split(' '); // turning into an array based on spaces
+val = tags.split(','); // turning into an array based on comma's
+
+val = str.replace('you', 'him'); // replaces you with him
+
+val = tags.includes('Web Design'); //looks for a certain thing and tells us if its is located in the specified string or not
+val = tags.includes('Java'); // false as it is not present in the specified string
 
 console.log(val);
