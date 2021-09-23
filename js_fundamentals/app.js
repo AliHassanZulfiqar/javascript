@@ -177,6 +177,7 @@ console.log(val);
 
 // 7: String Methods Concatenation
 
+/*
 const firstName = 'Ali';
 const lastName = 'Hassan';
 const age = 43;
@@ -232,3 +233,44 @@ val = tags.includes('Web Design'); //looks for a certain thing and tells us if i
 val = tags.includes('Java'); // false as it is not present in the specified string
 
 console.log(val);
+*/
+
+// 8: Template literals/strings
+
+const name = 'Ali';
+const age = 23;
+const job = 'Developer';
+const city = 'Lahore';
+
+let html;
+
+//Without template strings/literals (es5)
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
+
+html = '<ul>' +
+          '<li>Name:  ' + name + '</li>' +
+          '<li>Age:  ' + age + '</li>' +
+          '<li>Job:  ' + job + '</li>' +
+          '<li>City:  ' + city + '</li>' +
+        '</ul>';
+
+// With Template literals/strings
+function hello(){
+  return 'Hello World';
+};
+
+html = `
+  <ul>
+    <li>Name: ${name}</li>
+    <li>Age: ${age}</li>
+    <li>Job: ${job}</li>
+    <li>City: ${city}</li>
+    <li>${4+4}</li>
+    <li>${4+name}</li>
+    <li>${hello()}</li>
+    <li>${hello()}</li>
+    <li>${age > 30 ? 'over 30' : 'under 30'}</li>
+  </ul>
+`;
+
+document.body.innerHTML = html
