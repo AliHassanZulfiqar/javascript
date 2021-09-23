@@ -74,9 +74,9 @@ num.push(6); // same goes for arrays, here we adding a number to array
 console.log(num);
 */
 
-// Data Types:
+// 4: Data Types:
 
-
+/*
 // PRIMITIVE
 
 const name = 'John Doe'; // String
@@ -96,3 +96,45 @@ const address = {
 const today = new Date();
 console.log(today);
 console.log(typeof today);
+*/
+
+// 5: Type Conversion
+
+let val;
+
+// number to string
+val = String(555); // note S is capital
+val = String(4+4);
+// bool to string
+val = String(true); // note S is capital
+// Date to string
+val = String(new Date()); // note S is capital
+// Array to string
+val = String([1, 2, 3, 4]); // note S is capital
+// toString()
+val = (4).toString(); // note S is capital
+val = (true).toString();
+
+// String to number
+val = Number('5');
+val = Number(true);
+val = Number(false);
+val = Number(null);
+val = Number('hello');
+val = Number([1,2,3]);
+
+val = parseInt('100.30');
+val = parseFloat('100.30'); // needed for decimals
+
+//output
+console.log(val);
+console.log(typeof val);
+// console.log(val.length); //only works on Strings
+console.log(val.toFixed(2)); //only works on numbers
+
+const val1 = String(5);
+const val2 = 6;
+const sum = Number(val1 + val2);
+
+console.log(sum);
+console.log(typeof sum);
