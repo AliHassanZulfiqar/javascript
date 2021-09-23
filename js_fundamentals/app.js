@@ -279,6 +279,7 @@ document.body.innerHTML = html
 
 // 9: Arrays
 
+/*
 // creating arrays
 const num = [9, 740, 46, 38, 2]; // bracket method
 const num2 = new Array(33, 36, 39, 41); // array constructor/object method
@@ -320,3 +321,45 @@ val = num.find(over_50); //finding a certain value using a function
 
 console.log(num)
 console.log(val)
+*/
+
+// 10: Object literals and accessingn them
+
+const person = {
+  firstName: 'Irshad',
+  lastName: 'Ali',
+  age: 40,
+  email: 'irshad@gmail.com',
+  hobbies: ['music', 'sports'],
+  address: {
+    city: 'Lahore',
+    state: 'Punjab'
+  },
+  getBirthYear: function(){
+    return 2021 - this.age; // need to use this. to access an object outside the function
+  }
+}
+
+let val;
+
+val = person;
+// Get specific value
+val = person.firstName;
+val = person['lastName'];
+val = person.age;
+val = person.hobbies[1]; // we can also type only hobbies to see all the array items
+val = person.address.state;
+val = person.address['city'];
+val = person.getBirthYear();
+
+console.log(val);
+
+const people = [
+  {name: 'Ali', age: 30},
+  {name: 'Hassan', age: 23},
+  {name: 'Imran', age: 40}
+];
+
+for(let i = 0; i < people.length; i++){
+  console.log(people[i].name);
+}
