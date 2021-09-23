@@ -237,6 +237,7 @@ console.log(val);
 
 // 8: Template literals/strings
 
+/*
 const name = 'Ali';
 const age = 23;
 const job = 'Developer';
@@ -274,3 +275,48 @@ html = `
 `;
 
 document.body.innerHTML = html
+*/
+
+// 9: Arrays
+
+// creating arrays
+const num = [9, 740, 46, 38, 2]; // bracket method
+const num2 = new Array(33, 36, 39, 41); // array constructor/object method
+const fruit = ['apple', 'banana', 'orange', 'mango'];
+const mixed = new Array('Hello', true, undefined, null, {a:1, b:2}, new Date());
+
+let val;
+
+val = num.length; //get array length
+val = Array.isArray(num2); //check if it is an array
+val = num[3];
+val = num2[3]; // getting a single value by giving the index
+val = num2.indexOf(39); //finding the index of
+num[2] = 26; //Inserting into arrays
+
+
+// Mutating Arrays
+
+// num.push(350); // add into from end
+// num.unshift(134); // add into at the start
+// num.pop(); // take off 1 from the end
+// num.shift(); // take off 1 from the start
+// num.splice(1,3); // take off from certain somewhere to certain somewhere
+// num.reverse() // reverses the original order
+
+val = num.concat(fruit); //concate/combine both arrays num and fruit
+val = fruit.sort(); // sorting array in an alphabetic order
+// val = num.sort(); // This is supposed to be going from lowest to highest of five down here what it's doing is it's sorting by the first number. So what you want to do to fix this is use what's called the compare function.
+
+// val = num.sort(function(a, b){
+//   return a - b;
+// }); //using conpare function to fix the issue with number sorting
+
+function over_50(num){
+  return num > 50
+};
+
+val = num.find(over_50); //finding a certain value using a function
+
+console.log(num)
+console.log(val)
