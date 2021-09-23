@@ -100,6 +100,7 @@ console.log(typeof today);
 
 // 5: Type Conversion
 
+/*
 let val;
 
 // number to string
@@ -138,3 +139,36 @@ const sum = Number(val1 + val2);
 
 console.log(sum);
 console.log(typeof sum);
+*/
+
+// 6: Math Object & numbers
+
+const num1 = 100;
+const num2 = 50;
+let val;
+
+// Simple math with numbers
+val = num1 + num2;
+val = num1 * num2;
+val = num1 - num2;
+val = num1 / num2;
+val = num1 % num2;
+
+// Math Object
+val = Math.PI;
+val = Math.E;
+val = Math.round(2.4);
+val = Math.ceil(2.4);
+val = Math.floor(2.8);
+val = Math.sqrt(64);
+val = Math.abs(-3);
+val = Math.pow(8, 2);
+val = Math.min(2,33,4,1,55,6,3,-2);
+val = Math.max(2,33,4,1,55,6,3,-2);
+val = Math.random();
+
+val = Math.random() * 20; // a random number b/w 1 & 19
+val = Math.random() * 20 + 1; // a random number b/w 1 & 20
+val = Math.floor(Math.random() * 20 + 1); // a random number b/w 1 & 20 excluding decimals
+
+console.log(val);
