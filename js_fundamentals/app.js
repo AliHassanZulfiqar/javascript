@@ -400,6 +400,7 @@ console.log(birthdate);
 
 // 12: Confditionals #1(if else)
 
+/*
 // if(something){
 //   do something
 // } else {
@@ -496,3 +497,48 @@ if(id === 100)
   console.log('CORRECT');
 else
   console.log('INCORRECT');
+*/
+
+// 13: Confditionals #2(switch)
+
+const color = 'Yellow';
+
+switch(color){
+  case 'red':
+    console.log('color is red');
+    break;
+  case 'blue':
+    console.log('color is blue');
+    break;
+  default:
+    console.log('Color is neither \"red\" nor \"blue\"');
+}
+
+let day;
+
+switch(new Date().getDay()){
+  case 0:
+    day = 'Monday';
+    break;
+  case 1:
+    day = 'Tuesday';
+    break;
+  case 3:
+    day = 'Wednesday';
+    break;
+  case 4:
+    day = 'Thursday';
+    break;
+  case 5:
+    day = 'Friday';
+    break;
+  case 6:
+    day = 'Saturday';
+    break;
+  case 7:
+    day = 'Sunday';
+    break;
+}
+
+
+console.log(`Today is ${day}`);
