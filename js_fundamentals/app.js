@@ -325,6 +325,7 @@ console.log(val)
 
 // 10: Object literals and accessingn them
 
+/*
 const person = {
   firstName: 'Irshad',
   lastName: 'Ali',
@@ -363,3 +364,34 @@ const people = [
 for(let i = 0; i < people.length; i++){
   console.log(people[i].name);
 }
+*/
+
+// 11: Dates & Time
+
+let val ;
+
+const today = new Date();
+let birthdate = new Date('7/15/2000');
+birthdate = new Date('7-15-2000');
+birthdate = new Date('July 15 2000');
+
+val = today; // shows current date & time
+val = today.getDate(); // shows date of the month only
+val = today.getMonth(); // shows month only
+val = today.getDay(); // shows day of the week
+val = today.getFullYear(); // shows the current year
+val = today.getHours(); // get the current hour
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime(); // amount of seconds that have passed since jan 1970
+val = today.getMinutes(); // shows the minutes
+
+birthdate.setDate(27); // set can be used to change the date and also certain things
+birthdate.setMonth('2');
+birthdate.setMinutes('4');
+birthdate.setHours('7');
+birthdate.setSeconds('45');
+birthdate.setFullYear('2077');
+
+console.log(val);
+console.log(birthdate);
