@@ -368,7 +368,6 @@ for(let i = 0; i < people.length; i++){
 
 // 11: Dates & Time
 
-/*
 let val ;
 
 const today = new Date();
@@ -396,4 +395,3 @@ birthdate.setFullYear('2077');
 
 console.log(val);
 console.log(birthdate);
-*/
