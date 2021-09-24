@@ -499,8 +499,9 @@ else
   console.log('INCORRECT');
 */
 
-// 13: Confditionals #2(switch)
+// 13: Conditionals #2(switch)
 
+/*
 const color = 'Yellow';
 
 switch(color){
@@ -542,3 +543,54 @@ switch(new Date().getDay()){
 
 
 console.log(`Today is ${day}`);
+*/
+
+// 14: Functions
+
+// Function Declaration
+
+function greeitngs(first_name = 'Ali', last_name = 'Hassan'){
+  // if(typeof first_name === 'undefined'){first_name = 'Ali'}; // used to be done before es6
+  // if(typeof last_name === 'undefined'){last_name = 'Hassan'}; // used to be done before es6
+  // console.log('Hello');
+  return `Hello! ${first_name} ${last_name}`;
+};
+
+// console.log(greeitngs()); // what ever we write in () overwrites assignments above
+
+// Function Expressions: it is basically putting a function as a variable assignment
+
+const square = function(x = 12){
+  return x*x;
+};
+
+// console.log(square());
+
+// Immediatley Invokable Function Expressions - IIFE's
+
+// (function(){
+//   console.log('IIFE Ran');
+// })();
+
+// (function(name){
+//   console.log(`Hello! ${name}`);
+// })('Ali');
+
+// Property Methods: when a function is put inside an object, it is called method.
+
+const todo = {
+  add: function(){
+    console.log('function inside object.');
+  },
+  edit: function(id){
+    console.log(`Now we are printing: ${id}`);
+  }
+}
+
+todo.asin = function(){
+  console.log('This is another method')
+}
+
+todo.add();
+todo.edit('Something inside id');
+todo.asin();
