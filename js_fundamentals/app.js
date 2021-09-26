@@ -599,6 +599,7 @@ todo.asin();
 
 // 15: General Loops
 
+/*
 // FOR LOOP
 
 // for(let i = 0; i < 10; i++){
@@ -673,3 +674,64 @@ const user = {
 for(let x in user){
   console.log(`${x} : ${user[x]}`);
 }
+*/
+
+// Window Objects / Methods/ Properties
+
+//window.alert("Hello, There"); // we don't need to specify window here as alert is a part of window object and browser and out environment understands that.
+
+// alert("Hello! What is your name?")
+// const ui = prompt(); // it just prompts the user to type something
+// alert(`Welcome ${ui}! Nice to meet you.`);
+
+// confirm
+// if(confirm('Are you sure?')){
+//   console.log('Yes');
+// }
+// else {
+//   console.log('No')
+// };
+
+let val;
+
+// Outter height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+// Inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll points
+val = window.scrollY; 
+val = window.scrollX;
+
+// Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+// Redirect
+//window.location.href = 'http://google.com'; // Usually we need to put our sire reference here
+//Reload
+//window.location.reload();
+
+// History Object
+
+// window.history.go(-2);
+// val = window.history.length; // it shows how many websites we have visited
+
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
+
+
+
+console.log(val);
