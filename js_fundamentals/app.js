@@ -676,8 +676,9 @@ for(let x in user){
 }
 */
 
-// Window Objects / Methods/ Properties
+// 16: Window Objects / Methods/ Properties
 
+/*
 //window.alert("Hello, There"); // we don't need to specify window here as alert is a part of window object and browser and out environment understands that.
 
 // alert("Hello! What is your name?")
@@ -735,3 +736,38 @@ val = window.navigator.language;
 
 
 console.log(val);
+*/
+
+// 17: Global Scope and Block Scope:
+
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
+
+// function func_scope(){
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log(`Function Scope ${a} ${b} ${c}`);
+// };
+// func_scope();
+
+
+// Block Scope
+// if(true){
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log(`Function Scope ${a} ${b} ${c}`);
+// }; // We noticed var changed whereas let and const didn't, it happened because both were declared with the same name which caused block to overwrite global var. that's var works inside block & global
+
+// for(var a=0; a<=10; a++){
+//   console.log(`for Loop: ${a}`)
+// };
+
+// for(let b=0; b<=10; b++){
+//   console.log(`for Loop: ${b}`)
+// };
+
+console.log('Global Scope' + ' ' +a + ' ' + b + ' ' + c);
