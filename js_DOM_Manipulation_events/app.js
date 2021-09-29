@@ -1,5 +1,6 @@
 // 1: Document Object properties
 
+/*
 let val;
 
 val = document;
@@ -47,3 +48,39 @@ scriptsArr.forEach(function(script) {
 });
 
 console.log(val);
+*/
+
+// 2: Selectors
+
+// document.getElementById():
+
+// console.log(document.getElementById('task-title'));
+
+// // Get things from the element
+// console.log(document.getElementById('task-title').id);
+// console.log(document.getElementById('task-title').className);
+
+// const taskTitle = document.getElementById('task-title');
+
+// // Change styling
+// taskTitle.style.background = '#333';
+// taskTitle.style.color = '#fff';
+// taskTitle.style.padding = '5px';
+// // taskTitle.style.display = 'none';
+
+// // Change content
+// taskTitle.textContent = 'Task List';
+// taskTitle.innerText = 'My Tasks';
+// taskTitle.innerHTML = '<span style="color:red">Task List</span>';
+
+// document.querySelectors():
+
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.card-title'));
+console.log(document.querySelector('h5')); // it will only show the first one
+
+document.querySelector('li').style.color = '#ff4040'; // it will only select the first one
+document.querySelector('ul li').style.color = '#ff4040'; // still, it will only select the first one
+document.querySelector('li:last-child').style.color = '#ff4040'; // it will only select the last one
+document.querySelector('li:nth-child(3)').style.color = '#a6c020'; // it will only select the custom one
+document.querySelector('li:nth-child(odd)').style.background = '#333'; // it will only select the last one
