@@ -142,7 +142,7 @@ for(let i=0; i < liEven.length; i++){
 console.log(items);
 */
 
-// 3: DOM Element Creation
+// 3: DOM Traversing
 
 let val;
 
