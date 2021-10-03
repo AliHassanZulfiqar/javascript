@@ -153,7 +153,7 @@ val = listItem;
 val = list;
 
 // Get child nodes
-val = list.childNodes;
+val = list.childNodes; //returns nodelist including text nodes which can be line breaks most of the time.
 val = list.childNodes[0];
 val = list.childNodes[0].nodeName;
 val = list.childNodes[3].nodeType;
@@ -165,9 +165,11 @@ val = list.childNodes[3].nodeType;
 // 9 - Document itself
 // 10 - Doctype
 
+// IMPORTANT: nodeList includes everything in the document which even includes line breaks etc
+
 
 // Get children element nodes
-val = list.children;
+val = list.children; // returns html collection and does not include text nodes
 val = list.children[1];
 list.children[1].textContent = 'Hello';
 // Children of children
@@ -175,8 +177,8 @@ list.children[3].children[0].id = 'test-link';
 val = list.children[3].children[0];
 
 // First child
-val = list.firstChild;
-val = list.firstElementChild;
+val = list.firstChild; // includes text nodes too
+val = list.firstElementChild; // does not include text nodes
 
 // Last child
 val = list.lastChild;
@@ -187,12 +189,12 @@ val = list.childElementCount;
 
 // Get parent node
 val = listItem.parentNode;
-val = listItem.parentElement;
-val = listItem.parentElement.parentElement;
+val = listItem.parentElement; // most of the times it gives almost the same results as parentNode
+val = listItem.parentElement.parentElement; // parent of the parent
 
 // Get next sibling
 val = listItem.nextSibling;
-val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling; // we can combine different things
 
 // Get prev sibling
 val = listItem.previousSibling;
