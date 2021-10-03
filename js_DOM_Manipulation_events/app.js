@@ -385,6 +385,7 @@ function runEvent(e) {
 
 // 8: Keyboard Input Events 
 
+/*
 const form = document.querySelector('form');
 const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
@@ -426,3 +427,45 @@ function runEvent(e){
 
   // e.preventDefault();
 };
+*/
+
+// 9: Event Bubbling & Delegation
+
+// Event Bubbling: is a bubbling event which means it goes to it's parent element instead of chilren
+
+// EVENT BUBBLING
+
+// document.querySelector('.card-title').addEventListener('click', function(){
+//   console.log('card title');
+// });
+
+// document.querySelector('.card-content').addEventListener('click', function(){
+//   console.log('card content');
+// });
+
+// document.querySelector('.card').addEventListener('click', function(){
+//   console.log('card');
+// });
+
+// document.querySelector('.col').addEventListener('click', function(){
+//   console.log('col');
+// });
+
+// EVENT DELGATION: 
+
+// const delItem = document.querySelector('.delete-item');
+
+// delItem.addEventListener('click', deleteItem);
+
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e){
+  // if(e.target.parentElement.className === 'delete-item secondary-content'){
+  //   console.log('delete item');
+  // } // it is not a good practice as if we add more classes it will not work class has to exactly same as the parameter we provide
+
+  if(e.target.parentElement.classList.contains('delete-item')){
+    console.log('delete item');
+    e.target.parentElement.parentElement.remove();
+  }
+}
