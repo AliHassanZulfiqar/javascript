@@ -1,9 +1,9 @@
 // set local storage item
-// localStorage.setItem('name', 'John');
-// localStorage.setItem('age', '30');
+// localStorage.setItem('name', 'Ali');
+// localStorage.setItem('age', '23');
 
 // set session storage item
-// sessionStorage.setItem('name', 'Beth');
+// sessionStorage.setItem('name', 'Hassan');
 
 // remove from storage
 // localStorage.removeItem('name');
@@ -12,10 +12,18 @@
 // const name = localStorage.getItem('name');
 // const age = localStorage.getItem('age');
 
-// // clear local storage
+// clear local storage
 // localStorage.clear();
 
 // console.log(name, age);
+
+// document.querySelector('form').addEventListener('submit', function(e){
+//   const task = document.getElementById('task').value;
+//   localStorage.setItem('task', task);
+//   alert('Task saved');
+
+//   e.preventDefault();
+// }); // it basically overwrites the old tasks instead of adding more
 
 document.querySelector('form').addEventListener('submit', function(e){
   const task = document.getElementById('task').value;
