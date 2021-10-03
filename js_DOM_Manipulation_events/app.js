@@ -144,6 +144,7 @@ console.log(items);
 
 // 3: DOM Traversing
 
+/*
 let val;
 
 const list = document.querySelector('ul.collection');
@@ -200,3 +201,40 @@ val = listItem.nextElementSibling.nextElementSibling.previousElementSibling; // 
 val = listItem.previousSibling;
 val = listItem.previousElementSibling;
 console.log(val);
+*/
+
+// 4: DOM Element creation
+
+// Create element
+const li  = document.createElement('li');
+
+// Add class
+li.className = 'collection-item';
+
+// Add id
+li.id = 'new-item';
+
+// Add attribute
+li.setAttribute('title', 'New Item');
+
+// Create text node and append
+li.appendChild(document.createTextNode('Hello World'));
+
+// Create new link element
+const link = document.createElement('a');
+// Add classes to the newly created link element
+link.className = 'delete-item secondary-content';
+// Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// Append link into li
+li.appendChild(link);
+
+// Append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
+
+// li.style.background = '#333';
+// li.style.color = '#fff';
+// li.textContent = 'Added List Item'
+
+console.log(li);
