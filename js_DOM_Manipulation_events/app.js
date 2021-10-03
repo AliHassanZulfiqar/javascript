@@ -205,6 +205,7 @@ console.log(val);
 
 // 4: DOM Element creation
 
+/*
 // Create element
 const li  = document.createElement('li');
 
@@ -238,3 +239,53 @@ document.querySelector('ul.collection').appendChild(li);
 // li.textContent = 'Added List Item'
 
 console.log(li);
+*/
+
+// 5: Replacing & Removing Elements
+
+const newHeading = document.createElement('h3');
+//creating element
+newHeading.id = 'task-title';
+//adding an id
+newHeading.appendChild(document.createTextNode('Task List'));
+//getting the old element
+const oldHeading = document.getElementById('task-title');
+//Replacing
+document.querySelector('.card-action').replaceChild(newHeading, oldHeading);
+
+console.log(newHeading);
+
+//Removing the Element
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+//Remove list item
+lis[1].remove();
+
+// Remove child element
+list.removeChild(lis[2]);
+
+// Adding & Removing classes and attributes
+
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+let val;
+
+// Classes
+val = link.className;
+val = link.classList; // it returns to us in DOMTokenList format
+val = link.classList[0];
+link.classList.add('test'); // it adds a new class to the targeted element
+link.classList.remove('test');
+val = link;
+
+// Attributes
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'http://google.com'); // it simply replaces href attribute with google.com
+link.setAttribute('title', 'Google');// adding a new attribute named title
+val = link.hasAttribute('title'); // shows us a boolean value
+link.removeAttribute('title');
+val = link;
+
+console.log(val);
