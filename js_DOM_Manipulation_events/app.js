@@ -243,6 +243,7 @@ console.log(li);
 
 // 5: Replacing & Removing Elements
 
+/*
 const newHeading = document.createElement('h3');
 //creating element
 newHeading.id = 'task-title';
@@ -289,3 +290,57 @@ link.removeAttribute('title');
 val = link;
 
 console.log(val);
+*/
+
+// 6: Event listener & Event Object
+
+// document.querySelector('.clear-tasks').addEventListener('click', 
+// function(e){
+//   console.log('Hello World')
+
+//   e.preventDefault();
+// }); // so if there is nothing in the href attr than it will just run the funtion and reload the page which a default behaviour. we can simply overcome this by just using # or we can use an event object and pass the parameter to prevent default bahaviour
+
+// document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+// function onClick(e){
+//   console.log('Hello')
+//   e.preventDefault()
+// };
+
+// using a call back function is better than using an anonymous function
+
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+  let val;
+  
+  val = e;
+
+   // Event target element
+   val = e.target;
+   val = e.target.id;
+   val = e.target.className;
+   val = e.target.classList;
+
+  //  e.target.innerText = 'Hello'
+  
+  // Event type
+  val = e.type;
+
+  // Timestamp
+  val = e.timeStamp;
+ 
+  // Coords event relative to the window
+  val = e.clientY;
+  val = e.clientX;
+ 
+  // Coords event relative to the element
+  val = e.offsetY;
+  val = e.offsetX;
+  
+  
+  console.log(val)
+
+  e.preventDefault()
+};
